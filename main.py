@@ -190,22 +190,22 @@ def CalcReport(start, end):
     print(f"{len(unique([x['Seed'] for x in Logs if 'Stage changed to Dead' in x['Data']['Log Name']]))} Dead Seeds")
 
 
-    # print('\n\n\n\--------\n\nBreakdown of Agents and Cadences: \n\nAi Calls By Agent:')
-    # for agent in Ai_Call_Agents:
-    #     print(f"{agent['Name']}: {agent['Total']} Calls ({agent['Seeds']} Seeds)")
-    # print('\n\n')
-    #
-    # print('Ai Calls By Cadence:')
-    # for cadence in Ai_Call_Cadences:
-    #     print(f"{cadence['Name']}: {cadence['Total']} Calls ({cadence['Seeds']} Seeds)")
-    # print('\n\n')
-    # print('Emails By Cadence:')
-    # for cadence in Emails_Cadences:
-    #     print(f"{cadence['Name']}: {cadence['Total']} Emails ({cadence['Seeds']} Seeds)")
-    # print('\n\n')
-    # print('SMS By Cadence:')
-    # for cadence in SMS_Cadences:
-    #     print(f"{cadence['Name']}: {cadence['Total']} Emails ({cadence['Seeds']} Seeds)")
+    print('\n\n\n\--------\n\nBreakdown of Agents and Cadences: \n\nAi Calls By Agent:')
+    for agent in Ai_Call_Agents:
+        print(f"{agent['Name']}: {agent['Total']} Calls ({agent['Seeds']} Seeds)")
+    print('\n\n')
+
+    print('Ai Calls By Cadence:')
+    for cadence in Ai_Call_Cadences:
+        print(f"{cadence['Name']}: {cadence['Total']} Calls ({cadence['Seeds']} Seeds)")
+    print('\n\n')
+    print('Emails By Cadence:')
+    for cadence in Emails_Cadences:
+        print(f"{cadence['Name']}: {cadence['Total']} Emails ({cadence['Seeds']} Seeds)")
+    print('\n\n')
+    print('SMS By Cadence:')
+    for cadence in SMS_Cadences:
+        print(f"{cadence['Name']}: {cadence['Total']} Emails ({cadence['Seeds']} Seeds)")
 
 with ui.row():
     with ui.column():
