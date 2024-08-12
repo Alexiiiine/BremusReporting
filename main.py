@@ -171,7 +171,7 @@ def CalcReport(start, end):
     print(f'Interested: {len(Interested)}')
     print(f"{len(unique([x['Seed'] for x in Logs if 'Status changed to Interested' in x['Data']['Log Name']]))} Interested Seeds")
     print(f"{len(unique([x['Seed'] for x in Logs if 'Status changed to App Sent' in x['Data']['Log Name']]))} App Sent Seeds")
-    print(f"{len(unique([x['Seed'] for x in Logs if 'Status changed to Form Complete' in x['Data']['Log Name']]))} Form Complete Seeds")
+    print(f"{len(unique([x['Seed'] for x in Logs if 'Status changed to Form Complete' in x['Data']['Log Name'] or 'Entered ' in x['Data']['Log Name']]))} Form Complete Seeds")
     print(f"{len(unique([x['Seed'] for x in Logs if 'Entered Mailer Code' in x['Data']['Log Name']]))} Mailer Scans Seeds")
 
 
